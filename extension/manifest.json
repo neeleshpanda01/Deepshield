@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "DeepShield - Deepfake Detector",
+  "version": "1.0",
+  "description": "Real-time deepfake detection for Jitsi calls",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "DeepShield Detector"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://meet.jitsi.org/*",
+        "*://meet.jit.si/*",
+        "*://jitsi.example.com/*",
+        "*://localhost:*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": [
+    "*://localhost:5000/*"
+  ]
+}

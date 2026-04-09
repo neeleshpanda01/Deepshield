@@ -1,0 +1,38 @@
+/* Content script styles */
+
+#deepshield-overlay {
+  animation: fadeIn 0.3s ease-in;
+}
+
+#deepshield-alert {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#deepshield-status {
+  border: 2px solid #333;
+  transition: all 0.3s ease;
+}
+
+#deepshield-status:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .video-container { position: relative; }
+        video { background: #333; display: block; }
+        #self-view { width: 150px; height: 100px; position: absolute; bottom: 10px; right: 10px; border: 1px solid white; }
+        #remote-view { width: 800px; height: 600px; margin: 0 auto; }
+        #hidden-view { width: 500px; height: 500px; display: none; }
+    </style>
+</head>
+<body>
+    <h1>DeepShield Video Selection Test</h1>
+    <div class="video-container">
+        <!-- Remote view (Large - Active Speaker) -->
+        <video id="remote-view" autoplay muted></video>
+
+        <!-- Self view (Small) -->
+        <video id="self-view" autoplay muted></video>
+        
+        <!-- Hidden view -->
+        <video id="hidden-view" autoplay muted></video>
+    </div>
+</body>
+</html>
